@@ -7,57 +7,85 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" href="/assets/images/logoimage.png">
   <link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <title>Grocery List</title>
 </head>
 
 <body>
+  <!-- Navbar with imagelogo, title logo and devname -->
   <nav class="navbar" role="banner">
     <div class="logo">
       <img class="logoimg" src="assets/images/logoimage.png"
         alt="image of site logo which includes a shopping cart with the initials GL">
     </div>
-    <div class="header-title">
-      <p >
+    <div class="header-title" role="Company name with slogan">
+      <p>
         BEST GROCERY LIST IN THE WORLD</br>
         <span>
           THE GROCERY LIST</br>
         </span>
         &mdash; NO HASSLE WORRY FREE &mdash;
-
       </p>
     </div>
+    <!-- Devname added to show where a user login info might be displayed -->
     <div class="devname">
       Priyesh Patel
-      </br>
-      91priyesh@gmail.com
     </div>
-
-
   </nav>
 
+  <section class="mission-statement" role="Mission Statement for the company">
+    "Our mission at The Grocery List is to be the premier quality inventory displayer in the world"
+  </section>
+
+  <!-- Groceries inventory section -->
+  <section class="ginventory" role="Groceries inventory title">
+    <h2>Groceries Inventory</h2>
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+  </section>
+
+  <!-- Buttons to display inventory -->
+  <section class="buttons-wrapper" role="Buttons for displaying inventory">
+    <button id="all-btn" class="primary-btn">All</button>
+    <button id="beverages-btn" class="primary-btn">Beverages</button>
+    <button id="dairy-btn" class="primary-btn">Dairy</button>
+    <button id="desserts-btn" class="primary-btn">Desserts</button>
+    <button id="fruits-btn" class="primary-btn">Fruits</button>
+    <button id="pasta-btn" class="primary-btn">Pasta</button>
+  </section>
+
+  <!-- Section to display cards of selected button -->
+  <section class="cards-wrapper" role="Cards section displaying inventory">
+    <div id="all-cards">
+      ALL
+    </div>
+    <div id="beverages-cards">
+      Beverages
+    </div>
+    <div id="dairy-cards">
+      Dairy
+    </div>
+    <div id="desserts-cards">
+      Desserts
+    </div>
+    <div id="fruits-cards">
+      Fruits
+    </div>
+    <div id="pasta-cards">
+      Pasta
+    </div>
+
+  </section>
 
 
 
 
 
-
-
-
-
-  <p>Lorem ipsum dolor sit amet <a class="primary-text" href="#">consectetur adipisicing </a>elit. Dolor explicabo nisi
-    eaque ab debitis doloribus harum exercitationem nostrum earum. Totam molestias nisi distinctio quo earum beatae
-    voluptas aliquam alias ut. </p>
-  <button class="primary-btn">Read More</button>
-  <h3>Hello World!</h3>
-  <ul id="menu">
-    <li><a href="">link 1</a></li>
-    <li><a href="">link 2</a></li>
-    <li><a href="">link 3</a></li>
-  </ul>
-
+  <!-- jquery/ajax links -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Canvas chart script links -->
+  <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
   <script type="text/javascript" src="/assets/groceries.json"></script>
   <script src="assets/js/index.js"></script>
 

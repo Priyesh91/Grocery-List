@@ -10,8 +10,8 @@
     "item": "milk",
     "type": "2%",
     "brand": "generic",
-    "qty": "1 gallon"
-  },
+    "qty": 1
+    },
   {
     "category": "pasta",
     "item": "Pasta",
