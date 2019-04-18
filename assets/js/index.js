@@ -1,5 +1,64 @@
+//created grocery list variable to overcome github not recognizing static jason and javascript file sources.
+const groceryList = 
+[{
+  "category": "fruit",
+  "item": "apples",
+  "type": "Honey Crisp",
+  "brand": "Little cuties",
+  "qty": 10
+},
+{
+  "category": "beverage",
+  "item": "milk",
+  "type": "2%",
+  "brand": "generic",
+  "qty": 1
+  },
+{
+  "category": "pasta",
+  "item": "Pasta",
+  "type": "Penne",
+  "brand": "Barilla",
+  "qty": 3
+},
+{
+  "category": "dessert",
+  "item": "Gelatin dessert",
+  "type": "Green",
+  "brand": "Jello",
+  "qty": 3
+},
+{
+  "category": "dairy",
+  "item": "Yogurt",
+  "type": "Assorted flavors",
+  "brand": "Chobani",
+  "qty": 12
+},
+{
+  "category": "pasta",
+  "item": "Pasta",
+  "type": "Linguini",
+  "brand": "Barilla",
+  "qty": 3
+},
+{
+  "category": "beverage",
+  "item": "Apple juice",
+  "type": "regular",
+  "brand": "Happy Farms",
+  "qty": 2
+},
+{
+  "category": "beverage",
+  "item": "Vodka",
+  "type": "Tangerine",
+  "brand": "Grey Goose",
+  "qty": 1
+}
+]
+
 $(document).ready(function () {
-  console.log(groceryList);
   //If I have time I will calculate the following through extracting values from json file instead of using hard coded values:
   //----total quantity calculations:
   //-------fixed quantity amount in json file for milk that had qty amount as a string with gallon in it, for time purpose did not write code to isolate that and pull out the interger 1.
