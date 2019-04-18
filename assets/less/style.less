@@ -14,18 +14,26 @@ body {
   line-height: @line-height;
   margin: 0;
 }
-
+/* first navbar with gradient
 .navbar {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   color: white;
   background-image: linear-gradient(to bottom right, @primary-color, @secondary-color);
-  // background-color: rgb(0, 0, 0);
+  background-color: @primary-color;
   padding: auto;
-  margin: .5%;
 }
-
+*/
+.navbartwo {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  color: white;
+  // background-image: linear-gradient(to bottom right, @primary-color, @secondary-color);
+  background-color: #01206977;
+  padding: auto;
+}
 .logo {
   min-width: 0;
   margin: 5px;
@@ -75,18 +83,31 @@ body {
 
 }
 
-.mission-statement {
-  text-align: center;
-  font-size: 1.5em;
-  margin: .5%;
-  padding: 1%;
-  // background-color: lighten(@primary-color, 45%);
+.master-header{
+  background-image: url("../images/banner4.jpg");
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: scroll;
+  width: 100%;
+  height: 50vh;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 
+  
+  // h1 {
+  //   text-align: center;
+  //   color: white;
+  //   font-size: 2em;
+  //   padding: 1%;
+  //   margin: 0;
+  //   width: 70%;
+  //   line-height: 1.5em;
+  // }
 }
 
-.ginventory {
-  margin: 0.5%;
-}
 
 // .ginventory-main {
 //   color: white;
@@ -106,7 +127,6 @@ body {
   display: flex;
   flex-flow: row nowrap;
   height: 100%;
-  margin: 0.5%;
 
   button {
     width: 40%;
@@ -128,18 +148,19 @@ body {
 .border-radius(@radius) {
   border-radius: @radius;
 }
+
 .bordered {
   border-top: dotted 1px #000;
   border-bottom: solid 2px #000;
 }
 
-.cards-main{
+.cards-main {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  height:100%;
+  height: 100%;
 
-  .card{
+  .card {
     width: 25%;
     margin: 1%;
     padding-left: 2%;
