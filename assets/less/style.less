@@ -2,11 +2,12 @@
 @primary-color: #012169;
 @secondary-color: lighten(@primary-color, 40%);
 @background-color: #f3f3f307;
-@grey-text: rgb(236, 223, 223);
+@grey-text: rgb(243, 237, 237);
 @line-height: 1.2em;
 @body-font: 'Spectral', serif;
 @title-font: 'Oswald', sans-serif;
 @red-color: "red";
+@slogan-font: 'Roboto', sans-serif;
 
 body {
   font-family: @body-font;
@@ -14,6 +15,19 @@ body {
   line-height: @line-height;
   margin: 0;
 }
+
+.master-header{
+  background-image: url("../images/banner4.jpg");
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: scroll;
+  width: 100%;
+  height: 65vh;
+}
+
+
 /* first navbar with gradient
 .navbar {
   display: flex;
@@ -31,7 +45,8 @@ body {
   justify-content: space-between;
   color: white;
   // background-image: linear-gradient(to bottom right, @primary-color, @secondary-color);
-  background-color: #01206977;
+  // background-color: #01206977;
+  background-color: rgba(1, 32, 105, 0.63);
   padding: auto;
 }
 .logo {
@@ -83,45 +98,46 @@ body {
 
 }
 
-.master-header{
-  background-image: url("../images/banner4.jpg");
-  opacity: 0.9;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: scroll;
-  width: 100%;
-  height: 50vh;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-
+.slogan-statement{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
-  // h1 {
-  //   text-align: center;
-  //   color: white;
-  //   font-size: 2em;
-  //   padding: 1%;
-  //   margin: 0;
-  //   width: 70%;
-  //   line-height: 1.5em;
-  // }
+  p {
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    width: 100%;
+    padding-top: 3%;
+    font-family: @slogan-font;
+    font-weight: 700;
+    letter-spacing: .05em;
+    span{
+      line-height: 4em;
+      font-size: .4em;
+      color:@grey-text;
+    }
+   
+  }
+}
+//animation for slogan
+.slide-animation {
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
 
-// .ginventory-main {
-//   color: white;
-//   // background-image: linear-gradient(to bottom right, @secondary-color, @primary-color);
-//   background-color: #6380a1;
-//   margin: 0%, 10%, .5%, 10%;
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 
-
-//   h2 {
-//     padding: .5em;
-//     margin: 0;
-//     font-weight: inherit;
-//   }
-// }
 
 .buttons-wrapper {
   display: flex;
