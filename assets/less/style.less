@@ -16,7 +16,7 @@ body {
   margin: 0;
 }
 
-.master-header{
+.master-header {
   background-image: url("../images/banner4.jpg");
   opacity: 0.9;
   background-repeat: no-repeat;
@@ -49,6 +49,7 @@ body {
   background-color: rgba(1, 32, 105, 0.63);
   padding: auto;
 }
+
 .logo {
   min-width: 0;
   margin: 5px;
@@ -98,11 +99,11 @@ body {
 
 }
 
-.slogan-statement{
+.slogan-statement {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   p {
     text-align: center;
     color: white;
@@ -113,13 +114,14 @@ body {
     font-weight: 700;
     letter-spacing: .05em;
     display: none;
-    span{
+
+    span {
       line-height: 4em;
       font-size: .4em;
-      color:@grey-text;
+      color: @grey-text;
       display: none;
     }
-   
+
   }
 }
 
@@ -177,8 +179,9 @@ body {
 
 
 @media(max-width: 720px) {
-  .navbar {}
-
+  .master-header {
+    height: 50vh;
+  }
   .logo {
     max-width: 5%;
   }
@@ -212,19 +215,17 @@ body {
       }
     }
   }
-  .slogan-statement{
-        
+
+  .slogan-statement {
     p {
-      font-size: 1.6em;
+      font-size: 1.2em;
       width: 100%;
-      padding-top: 15%;
-      span{
+      padding-top: 17%;
+
+      span {
         line-height: 3em;
-        font-size: .45em;
+        font-size: .55em;
       }
-     
     }
   }
-  
-
 }
