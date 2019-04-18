@@ -44,7 +44,8 @@ $(document).ready(function () {
       var options = {
         // backgroundColor: "#6380a1",
         title: {
-          text: "Current Inventory"
+          text: ""
+
         },
         subtitles: [{
           text: "As of April, 2019"
@@ -63,11 +64,11 @@ $(document).ready(function () {
           dataPoints:
           //calucation have been derived manually also functions for each indiviual parts are above as well
           [
-            { y: 28.57, label: uniqueCategories[0], color:"#ff00bb"},
-            { y: 34.29, label: uniqueCategories[4], color:"#ff00bb" },
-            { y: 11.43, label: uniqueCategories[1], color:"#ff00bb" },
-            { y: 17.14, label: uniqueCategories[2], color:"#ff00bb" },
-            { y: 8.57, label: uniqueCategories[3], color:"#ff00bb" },
+            { y: 28.57, label: uniqueCategories[0], color:"#f2290e"},
+            { y: 34.29, label: uniqueCategories[4], color:"#9e27f9" },
+            { y: 11.43, label: uniqueCategories[1], color:"#08ad21" },
+            { y: 17.14, label: uniqueCategories[2], color:"#ff7620" },
+            { y: 8.57, label: uniqueCategories[3], color:"#2032ff" },
           ]
         }]
       };
