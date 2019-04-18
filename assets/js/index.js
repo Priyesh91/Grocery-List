@@ -80,7 +80,7 @@ $(document).ready(function () {
       //----card template to add data dynamically from array of objects
       function createCard(cardData) {
         let cardTemplate = [
-          "<div class='card ",cardData.category,"-card'>",
+          "<div class='gradient-border card ",cardData.category,"-card'>",
           "<h2>",cardData.item,"</h2>",
           "<h3>Type: ",cardData.type,"</h3>",
           "<h4>Brand: ",cardData.brand,"</h4>",
