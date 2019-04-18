@@ -42,7 +42,7 @@ $(document).ready(function () {
       
       //canvas chart code
       var options = {
-        // backgroundColor: "#6380a1",
+        backgroundColor: "#d3e0ff",
         title: {
           text: ""
 

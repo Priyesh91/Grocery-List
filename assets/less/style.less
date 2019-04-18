@@ -109,7 +109,7 @@ body {
     color: white;
     font-size: 3em;
     width: 100%;
-    padding-top: 5%;
+    padding-top: 12%;
     font-family: @slogan-font;
     font-weight: 700;
     letter-spacing: .05em;
@@ -125,7 +125,31 @@ body {
   }
 }
 
+.ginventory {
+  border-style: inset;
+  border-width: .5em;
+  border-color: rgba(1, 32, 105, 0.849);
+  border-top: none;
+  text-align: center;
+  background-image: url(../images/titlebg.PNG);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+ 
+}
 
+.inventory-title {
+  background-color: rgba(1, 32, 105, 0.397);
+  font-size: 2em;
+  color: white;
+  height: 5vh;
+  padding-top: 2%;
+}
+
+.canvasjs-chart-container {
+  opacity: .9;
+
+}
 
 .buttons-wrapper {
   display: flex;
@@ -178,10 +202,11 @@ body {
 
 
 
-@media(max-width: 720px) {
+@media(max-width: 780px) {
   .master-header {
     height: 50vh;
   }
+
   .logo {
     max-width: 5%;
   }
@@ -229,3 +254,5 @@ body {
     }
   }
 }
+
+@media(max-width: 1020px) {}
