@@ -95,8 +95,7 @@ $(document).ready(function () {
       pastaqt = 6;
       dessertqt = 3;
       dairyqt = 12;
-      
-      
+            
       
       //canvas chart code
       var options = {
