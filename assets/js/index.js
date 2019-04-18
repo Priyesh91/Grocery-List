@@ -64,11 +64,11 @@ $(document).ready(function () {
           dataPoints:
           //calucation have been derived manually also functions for each indiviual parts are above as well
           [
-            { y: 28.57, label: uniqueCategories[0], color:"#f2290e"},
-            { y: 34.29, label: uniqueCategories[4], color:"#9e27f9" },
-            { y: 11.43, label: uniqueCategories[1], color:"#08ad21" },
-            { y: 17.14, label: uniqueCategories[2], color:"#ff7620" },
-            { y: 8.57, label: uniqueCategories[3], color:"#2032ff" },
+            { y: 28.57, label: uniqueCategories[0], color:"#663399"},
+            { y: 34.29, label: uniqueCategories[4], color:"#e74c3c" },
+            { y: 11.43, label: uniqueCategories[1], color:"#3a539b" },
+            { y: 17.14, label: uniqueCategories[2], color:"#16a085" },
+            { y: 8.57, label: uniqueCategories[3], color:"#e47833" },
           ]
         }]
       };
