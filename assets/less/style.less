@@ -114,7 +114,6 @@ body {
   }
 }
 
-
 .btn {
   padding: 10px 15px;
   border: 0;
@@ -129,11 +128,30 @@ body {
 .border-radius(@radius) {
   border-radius: @radius;
 }
-
 .bordered {
   border-top: dotted 1px #000;
   border-bottom: solid 2px #000;
 }
+
+.cards-main{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height:100%;
+
+  .card{
+    width: 25%;
+    margin: 1%;
+    padding-left: 2%;
+  }
+}
+
+.card {
+  border: solid;
+  background-color: rgb(232, 232, 235);
+}
+
+
 
 @media(max-width: 720px) {
   .navbar {}
@@ -171,9 +189,4 @@ body {
       }
     }
   }
-}
-
-.card {
-  border: solid;
-  background-color: rgb(128, 128, 189);
 }

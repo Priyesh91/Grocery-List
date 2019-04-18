@@ -97,14 +97,6 @@ $(document).ready(function () {
       $("#all-cards").append(cards);
     }); 
     
-    //----dynamically generates cards from beverages array of objects
-    
-    $("#test-btn").click(function () {
-      $(".beverage-card").hide();
-    });
-     
-   
-
     //Click function for button to hide/toggle
     //----function to hide all cards
     function hideCards() {
