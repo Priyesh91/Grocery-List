@@ -82,29 +82,17 @@ body {
   color: white;
   font-size: 3em;
   width: 100%;
-  padding-top: 3%;
+  padding-top: 5%;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   letter-spacing: 0.05em;
+  display: none;
 }
 .slogan-statement p span {
   line-height: 4em;
   font-size: 0.4em;
   color: #f3eded;
-}
-.slide-animation {
-  animation-duration: 3s;
-  animation-name: slidein;
-}
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
+  display: none;
 }
 .buttons-wrapper {
   display: flex;

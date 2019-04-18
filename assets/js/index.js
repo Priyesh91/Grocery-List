@@ -1,5 +1,7 @@
-
 $(document).ready(function () {
+ //animate slogan
+  animateSlogan();
+
   //If I have time I will calculate the following through extracting values from json file instead of using hard coded values:
   //----total quantity calculations:
   //-------fixed quantity amount in json file for milk that had qty amount as a string with gallon in it, for time purpose did not write code to isolate that and pull out the interger 1.
@@ -140,13 +142,13 @@ $(document).ready(function () {
       
     
     
-    
-    
-    
-    
-    
-    
     });
+    
+    function animateSlogan(){
+      $(".sloganDiv").fadeIn( 3000, function() {
+        $(".sloganSpan").fadeIn( 2000 );
+      });
+    }
     
     //created grocery list variable to overcome github not recognizing static jason and javascript file
     const groceryList = 
@@ -207,72 +209,7 @@ $(document).ready(function () {
       "qty": 1
     }
     ];
-    const beverages = [
-      {
-        "category": "beverage",
-        "item": "milk",
-        "type": "2%",
-        "brand": "generic",
-        "qty": 1
-        },
-        {
-          "category": "beverage",
-          "item": "Apple juice",
-          "type": "regular",
-          "brand": "Happy Farms",
-          "qty": 2
-        },
-        {
-          "category": "beverage",
-          "item": "Vodka",
-          "type": "Tangerine",
-          "brand": "Grey Goose",
-          "qty": 1
-        }
-    ];
-    const dairy = [
-      {
-        "category": "dairy",
-        "item": "Yogurt",
-        "type": "Assorted flavors",
-        "brand": "Chobani",
-        "qty": 12
-      }
-    ];
-    const desserts = [
-      {
-        "category": "dessert",
-        "item": "Gelatin dessert",
-        "type": "Green",
-        "brand": "Jello",
-        "qty": 3
-      },
-    ];
-    const fruits = [
-      {
-        "category": "fruit",
-        "item": "apples",
-        "type": "Honey Crisp",
-        "brand": "Little cuties",
-        "qty": 10
-      }
-    ];
-    const pasta = [
-      {
-        "category": "pasta",
-        "item": "Pasta",
-        "type": "Penne",
-        "brand": "Barilla",
-        "qty": 3
-      },
-      {
-        "category": "pasta",
-        "item": "Pasta",
-        "type": "Linguini",
-        "brand": "Barilla",
-        "qty": 3
-      }
-    ];
+   
 
     //------------Code was initially used to retrieve data from json file but github launched version does not accept json files for static pages there for resorted to creating  object in another js file.
     /*
