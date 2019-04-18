@@ -1,20 +1,19 @@
 $(document).ready(function () {
-
-  
-  //If I have time calculate the following through extracting values from json file instead of using hard coded values:
-  //-------total quant calculations:
-  //-----------fixed quantity amount in json file for milk that had qty amount as a string with gallon in it, for time purpose did not write code to isolate that and pull out the interger 1.
+  console.log(groceryList);
+  //If I have time I will calculate the following through extracting values from json file instead of using hard coded values:
+  //----total quantity calculations:
+  //-------fixed quantity amount in json file for milk that had qty amount as a string with gallon in it, for time purpose did not write code to isolate that and pull out the interger 1.
   const gListQtySum = groceryList.map(gList => gList.qty).reduce((a, c) => a + c);
   console.log(gListQtySum);
   
-  //--------categories array, duplicate removed
-  //-------------creating array of categories
+  //----categories array, duplicate removed
+  //-------creating array of categories
   const categories = [];
   groceryList.forEach(category => {
     categories.push(category.category);
   })
   
-  //--------capitalizing function for each word
+  //-------capitalizing function for each word
   const capitalizeNames = array => array.map(name =>
     name.split(' ').map(word =>
       word[0].toUpperCase() + word.slice(1).toLowerCase()
