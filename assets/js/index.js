@@ -48,7 +48,7 @@ $(document).ready(function () {
 
         },
         subtitles: [{
-          text: "As of April, 2019"
+          // text: "As of April, 2019"
         }],
         theme: "light1",
         animationEnabled: true,

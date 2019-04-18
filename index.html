@@ -47,47 +47,65 @@
       </p>
     </div>
     <!-- placing inventory title to have a background effect of the banner image -->
-   
+
   </section>
 
   <!-- Groceries inventory section -->
   <section class="ginventory" role="Groceries inventory title">
-     <div class="inventory-title">
+    <div class="inventory-title">
       Groceries Inventory
     </div>
-    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+    <div id="chartContainer" style="height: 250px; width: 100%;"></div>
   </section>
 
-  <!-- Buttons to display inventory -->
-  <section class="buttons-wrapper" role="Buttons for displaying inventory">
-    <button id="all-btn" class="primary-btn">All</button>
-    <button id="beverages-btn" class="primary-btn">Beverages</button>
-    <button id="dairy-btn" class="primary-btn">Dairy</button>
-    <button id="desserts-btn" class="primary-btn">Desserts</button>
-    <button id="fruits-btn" class="primary-btn">Fruits</button>
-    <button id="pasta-btn" class="primary-btn">Pasta</button>
-  </section>
-
-  <!-- Section to display cards of selected button -->
-  <section class="cards-wrapper" role="Cards section displaying inventory">
-    <div id="all-cards" class="cards-main">
+  <div class="detailed-inventory" role="View detailed inventory through categories">
+    <!-- Buttons to display inventory -->
+    <div class="buttons-wrapper" role="Buttons for displaying inventory">
+      <button id="all-btn" class="primary-btn">
+        <img src="assets/images/svgicons/noun_all_2287091.svg" alt="grocery by anbileru adaleru from the Noun Project">
+        <p>All</p>
+      </button>
+      <button id="beverages-btn" class="primary-btn">
+        <img src="assets/images/svgicons/noun_beverage_1498066.svg" alt="beverage by Daniela Baptista from the Noun Project">
+        <p>Beverages</p>
+      </button>
+      <button id="dairy-btn" class="primary-btn">
+        <img src="assets/images/svgicons/noun_dairy product_1176637.svg" alt="dairy by Dennis Tiensvold from the Noun Project">
+        <p>Dairy</p>
+      </button>
+      <button id="desserts-btn" class="primary-btn">
+        <img src="assets/images/svgicons/noun_Dessert_1131045.svg" alt="Dessert by Ben Davis from the Noun Project">
+        <p>Desserts</p>
+      </button>
+      <button id="fruits-btn" class="primary-btn">
+        <img src="assets/images/svgicons/noun_Apple_1262857.svg" alt="Apple by Adrien Coquet from the Noun Project">
+        <p>Fruits</p>
+      </button>
+      <button id="pasta-btn" class="primary-btn">
+        <img src="assets/images/svgicons/noun_Pasta_1394541.svg" alt="Pasta by sahua d from the Noun Project">
+        <p>Pasta</p>
+      </button>
     </div>
 
-  </section>
+    <!-- Section to display cards of selected button -->
+    <div class="cards-wrapper" role="Cards section displaying inventory">
+      <div id="all-cards" class="cards-main">
+      </div>
+    </div>
+
+    </section>
 
 
 
+    <!-- jquery/ajax links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Canvas chart script links -->
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
 
+    <!-- <script type="text/javascript" src="assets/groceries.json"></script> -->
 
-  <!-- jquery/ajax links -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <!-- Canvas chart script links -->
-  <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
-
-  <!-- <script type="text/javascript" src="assets/groceries.json"></script> -->
-
-  <script src="assets/js/index.js"></script>
+    <script src="assets/js/index.js"></script>
 
 
 
