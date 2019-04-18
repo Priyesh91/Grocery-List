@@ -114,43 +114,61 @@ $(document).ready(function () {
     $("#all-btn").click(function () {
       hideCards();
       showAllCards();
+      $("button").removeClass('btn-active')
+      $(this).addClass('btn-active')
     });
     //----------Show only beverages-cards
     $("#beverages-btn").click(function () {
       hideCards();
       $(".beverage-card").show();
+      $("button").removeClass('btn-active')
+      $(this).addClass('btn-active')
     });
     //----------Show only dairy-cards
     $("#dairy-btn").click(function () {
       hideCards();
       $(".dairy-card").show();
+      $("button").removeClass('btn-active')
+      $(this).addClass('btn-active')
     });
     //----------Show only desserts-cards
     $("#desserts-btn").click(function () {
       hideCards();
       $(".dessert-card").show();
+      $("button").removeClass('btn-active')
+      $(this).addClass('btn-active')
     });
     //----------Show only fruits-cards
     $("#fruits-btn").click(function () {
       hideCards();
       $(".fruit-card").show();
+      $("button").removeClass('btn-active')
+      $(this).addClass('btn-active')
+
     });
     //----------Show only fruits-cards
     $("#pasta-btn").click(function () {
       hideCards();
       $(".pasta-card").show();
+      $("button").removeClass('btn-active')
+      $(this).addClass('btn-active')
     });
       
     
+  });
     
-    });
+    
+    
     
     function animateSlogan(){
-      $(".sloganDiv").fadeIn( 3000, function() {
-        $(".sloganSpan").fadeIn( 2000 );
+      $(".sloganDiv").fadeIn( 2000, function() {
+        $(".sloganSpan").fadeIn( 1000 );
       });
     }
+
     
+
+
     //created grocery list variable to overcome github not recognizing static jason and javascript file
     const groceryList = 
     [{

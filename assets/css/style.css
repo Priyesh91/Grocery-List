@@ -138,17 +138,29 @@ body {
   height: 100%;
   border: solid;
   border-radius: 30%;
-  color: black;
-  background-color: #d3e0ff;
   display: flex;
   justify-content: center;
 }
-.buttons-wrapper button img {
+.buttons-wrapper img {
   height: 100%;
   width: 30%;
 }
-.buttons-wrapper button p {
+.buttons-wrapper p {
   font-size: 1.25em;
+}
+.btn {
+  background-color: #d3e0ff;
+  color: black;
+}
+.btn-active {
+  background-color: #5287fd;
+  color: white;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #5287fd;
+  color: white;
+  font-weight: bold;
 }
 .cards-main {
   display: flex;
@@ -163,7 +175,8 @@ body {
 }
 .card {
   border: solid;
-  background-color: #e8e8eb;
+  background-color: #d3e0ff;
+  opacity: 0.8;
 }
 @media (max-width: 780px) {
   .master-header {
