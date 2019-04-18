@@ -1,62 +1,3 @@
-//created grocery list variable to overcome github not recognizing static jason and javascript file sources.
-const groceryList = 
-[{
-  "category": "fruit",
-  "item": "apples",
-  "type": "Honey Crisp",
-  "brand": "Little cuties",
-  "qty": 10
-},
-{
-  "category": "beverage",
-  "item": "milk",
-  "type": "2%",
-  "brand": "generic",
-  "qty": 1
-  },
-{
-  "category": "pasta",
-  "item": "Pasta",
-  "type": "Penne",
-  "brand": "Barilla",
-  "qty": 3
-},
-{
-  "category": "dessert",
-  "item": "Gelatin dessert",
-  "type": "Green",
-  "brand": "Jello",
-  "qty": 3
-},
-{
-  "category": "dairy",
-  "item": "Yogurt",
-  "type": "Assorted flavors",
-  "brand": "Chobani",
-  "qty": 12
-},
-{
-  "category": "pasta",
-  "item": "Pasta",
-  "type": "Linguini",
-  "brand": "Barilla",
-  "qty": 3
-},
-{
-  "category": "beverage",
-  "item": "Apple juice",
-  "type": "regular",
-  "brand": "Happy Farms",
-  "qty": 2
-},
-{
-  "category": "beverage",
-  "item": "Vodka",
-  "type": "Tangerine",
-  "brand": "Grey Goose",
-  "qty": 1
-}
-]
 
 $(document).ready(function () {
   //If I have time I will calculate the following through extracting values from json file instead of using hard coded values:
@@ -95,7 +36,7 @@ $(document).ready(function () {
       pastaqt = 6;
       dessertqt = 3;
       dairyqt = 12;
-            
+      
       
       //canvas chart code
       var options = {
@@ -113,111 +54,245 @@ $(document).ready(function () {
           type: "pie",
           startAngle: 40,
           toolTipContent: "<b>{label}</b>: {y}%",
-      // showInLegend: "true", 
-      legendText: "{label}",
-      indexLabelFontSize: 16,
-      indexLabel: "{label} - {y}%",
-      dataPoints:
-      //calucation have been derived manually also functions for each indiviual parts are above as well
-      [
-        { y: 28.57, label: uniqueCategories[0] },
-        { y: 34.29, label: uniqueCategories[4] },
-        { y: 11.43, label: uniqueCategories[1] },
-        { y: 17.14, label: uniqueCategories[2] },
-        { y: 8.57, label: uniqueCategories[3] },
-      ]
-    }]
-  };
-  $("#chartContainer").CanvasJSChart(options);
-  
-  
-  //Click function for button to hide/toggle
-  //----function to hide all cards
-  function hideCards() {
-    $("#all-cards, #beverages-cards, #dairy-cards, #desserts-cards, #fruits-cards, #pasta-cards").hide();
-  };
-  //----function to show all cards on load
-  function showAllCards() {
-    hideCards();
-    $("#all-cards").show();
-  }
-  showAllCards();
-  //----------Show all cards
-  $("#all-btn").click(function () {
-    hideCards();
-    $("#all-cards").show();
-  });
-  //----------Show only beverages-cards
-  $("#beverages-btn").click(function () {
-    hideCards();
-    $("#beverages-cards").show();
-  });
-  //----------Show only dairy-cards
-  $("#dairy-btn").click(function () {
-    hideCards();
-    $("#dairy-cards").show();
-  });
-  //----------Show only desserts-cards
-  $("#desserts-btn").click(function () {
-    hideCards();
-    $("#desserts-cards").show();
-  });
-  //----------Show only fruits-cards
-  $("#fruits-btn").click(function () {
-    hideCards();
-    $("#fruits-cards").show();
-  });
-  //----------Show only fruits-cards
-  $("#pasta-btn").click(function () {
-    hideCards();
-    $("#pasta-cards").show();
-  });
-  
-  
-  
-  
-  
+          // showInLegend: "true", 
+          legendText: "{label}",
+          indexLabelFontSize: 16,
+          indexLabel: "{label} - {y}%",
+          dataPoints:
+          //calucation have been derived manually also functions for each indiviual parts are above as well
+          [
+            { y: 28.57, label: uniqueCategories[0] },
+            { y: 34.29, label: uniqueCategories[4] },
+            { y: 11.43, label: uniqueCategories[1] },
+            { y: 17.14, label: uniqueCategories[2] },
+            { y: 8.57, label: uniqueCategories[3] },
+          ]
+        }]
+      };
+      $("#chartContainer").CanvasJSChart(options);
+      
+      
+      
+      //dynamically adding content to webpage 
+      //----card template to add data dynamically from array of objects
+      function createCard(cardData) {
+        let cardTemplate = [
+          "<div class='card ",cardData.category,"-card'>",
+          "<h2>",cardData.item,"</h2>",
+          "<h3>Type: ",cardData.type,"</h3>",
+          "<h4>Brand: ",cardData.brand,"</h4>",
+          "<h5>Quantity: ",cardData.qty,"</h5>"
+        ];
+        return $(cardTemplate.join(""));
+      };
+      
+    let cards = $();
+    
+    //----dynamically generates cards from groceryList array of objects
+    
+    groceryList.forEach(function(item, i) {
+      cards = cards.add(createCard(item));
+    });
+    $(function() {
+      $("#all-cards").append(cards);
+    }); 
+    
+    //----dynamically generates cards from beverages array of objects
+    
+    $("#test-btn").click(function () {
+      $(".beverage-card").hide();
+    });
+     
+   
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-});
+    //Click function for button to hide/toggle
+    //----function to hide all cards
+    function hideCards() {
+      $(".beverage-card, .dairy-card, .dessert-card, .fruit-card, .pasta-card").hide();
+    };
+    //----function to show all cards on load
+    function showAllCards() {
+      $(".beverage-card, .dairy-card, .dessert-card, .fruit-card, .pasta-card").show();
+    }
+    showAllCards();
+    //----------Show all cards
+    $("#all-btn").click(function () {
+      hideCards();
+      showAllCards();
+    });
+    //----------Show only beverages-cards
+    $("#beverages-btn").click(function () {
+      hideCards();
+      $(".beverage-card").show();
+    });
+    //----------Show only dairy-cards
+    $("#dairy-btn").click(function () {
+      hideCards();
+      $(".dairy-card").show();
+    });
+    //----------Show only desserts-cards
+    $("#desserts-btn").click(function () {
+      hideCards();
+      $(".dessert-card").show();
+    });
+    //----------Show only fruits-cards
+    $("#fruits-btn").click(function () {
+      hideCards();
+      $(".fruit-card").show();
+    });
+    //----------Show only fruits-cards
+    $("#pasta-btn").click(function () {
+      hideCards();
+      $(".pasta-card").show();
+    });
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    });
+    
+    //created grocery list variable to overcome github not recognizing static jason and javascript file
+    const groceryList = 
+    [{
+      "category": "fruit",
+      "item": "Apples",
+      "type": "Honey Crisp",
+      "brand": "Little cuties",
+      "qty": 10
+    },
+    {
+      "category": "beverage",
+      "item": "Milk",
+      "type": "2%",
+      "brand": "generic",
+      "qty": 1
+      },
+    {
+      "category": "pasta",
+      "item": "Pasta",
+      "type": "Penne",
+      "brand": "Barilla",
+      "qty": 3
+    },
+    {
+      "category": "dessert",
+      "item": "Gelatin dessert",
+      "type": "Green",
+      "brand": "Jello",
+      "qty": 3
+    },
+    {
+      "category": "dairy",
+      "item": "Yogurt",
+      "type": "Assorted flavors",
+      "brand": "Chobani",
+      "qty": 12
+    },
+    {
+      "category": "pasta",
+      "item": "Pasta",
+      "type": "Linguini",
+      "brand": "Barilla",
+      "qty": 3
+    },
+    {
+      "category": "beverage",
+      "item": "Apple juice",
+      "type": "Regular",
+      "brand": "Happy Farms",
+      "qty": 2
+    },
+    {
+      "category": "beverage",
+      "item": "Vodka",
+      "type": "Tangerine",
+      "brand": "Grey Goose",
+      "qty": 1
+    }
+    ];
+    const beverages = [
+      {
+        "category": "beverage",
+        "item": "milk",
+        "type": "2%",
+        "brand": "generic",
+        "qty": 1
+        },
+        {
+          "category": "beverage",
+          "item": "Apple juice",
+          "type": "regular",
+          "brand": "Happy Farms",
+          "qty": 2
+        },
+        {
+          "category": "beverage",
+          "item": "Vodka",
+          "type": "Tangerine",
+          "brand": "Grey Goose",
+          "qty": 1
+        }
+    ];
+    const dairy = [
+      {
+        "category": "dairy",
+        "item": "Yogurt",
+        "type": "Assorted flavors",
+        "brand": "Chobani",
+        "qty": 12
+      }
+    ];
+    const desserts = [
+      {
+        "category": "dessert",
+        "item": "Gelatin dessert",
+        "type": "Green",
+        "brand": "Jello",
+        "qty": 3
+      },
+    ];
+    const fruits = [
+      {
+        "category": "fruit",
+        "item": "apples",
+        "type": "Honey Crisp",
+        "brand": "Little cuties",
+        "qty": 10
+      }
+    ];
+    const pasta = [
+      {
+        "category": "pasta",
+        "item": "Pasta",
+        "type": "Penne",
+        "brand": "Barilla",
+        "qty": 3
+      },
+      {
+        "category": "pasta",
+        "item": "Pasta",
+        "type": "Linguini",
+        "brand": "Barilla",
+        "qty": 3
+      }
+    ];
 
-//------------Code was initially used to retrieve data from json file but github launched version does not accept json files for static pages there for resorted to creating  object in another js file.
-/*
-//Using jQuery to access data from JSON file
-$.getJSON("/assets/groceries.json", function (data) {
-  //gorceryList from JSON file
-  const groceryList = data;
-  console.log(groceryList);
-
-  //individual items
-  groceryList.forEach(individualItem => {
-    // console.log(individualItem);
-  });
-}
-*/
+    //------------Code was initially used to retrieve data from json file but github launched version does not accept json files for static pages there for resorted to creating  object in another js file.
+    /*
+    //Using jQuery to access data from JSON file
+    $.getJSON("/assets/groceries.json", function (data) {
+      //gorceryList from JSON file
+      const groceryList = data;
+      console.log(groceryList);
+      
+      //individual items
+      groceryList.forEach(individualItem => {
+        // console.log(individualItem);
+      });
+    }
+    */
