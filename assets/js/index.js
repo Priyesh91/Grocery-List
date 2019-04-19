@@ -223,7 +223,6 @@ $(document).ready(function () {
     }
     ];
    
-
     //------------Code was initially used to retrieve data from json file but github launched version does not accept json files for static pages there for resorted to creating  object in another js file.
     /*
     //Using jQuery to access data from JSON file
