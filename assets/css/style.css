@@ -106,7 +106,9 @@ body {
 }
 .inventory-title {
   background-color: rgba(1, 32, 105, 0.397);
-  font-size: 1.75em;
+  font-family: 'Martel', serif;
+  font-size: 1.5em;
+  font-weight: bold;
   color: white;
   height: 4vh;
   padding-top: 2%;
@@ -219,8 +221,9 @@ button:hover {
   text-align: left;
   padding: 1%;
   padding-left: 3%;
+  font-weight: bold;
 }
-@media (max-width: 780px) {
+@media (max-width: 720px) {
   .master-header {
     height: 50vh;
   }
@@ -263,8 +266,8 @@ button:hover {
     height: 375vh;
   }
   .inventory-title {
-    font-size: 1em;
-    padding-top: 2%;
+    font-size: 1.2em;
+    padding-top: 4%;
     height: 4vh;
   }
   .chartContainer {

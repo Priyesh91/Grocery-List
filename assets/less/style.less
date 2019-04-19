@@ -2,13 +2,14 @@
 @primary-color: #012169;
 @secondary-color: lighten(@primary-color, 40%);
 @background-color: #f3f3f307;
+@red-color: "red";
+@chart-color: #d3e0ff;
 @grey-text: rgb(243, 237, 237);
 @line-height: 1.2em;
 @body-font: 'Spectral', serif;
 @title-font: 'Oswald', sans-serif;
-@red-color: "red";
 @slogan-font: 'Roboto', sans-serif;
-@chart-color: #d3e0ff;
+@header-font: 'Martel', serif;
 
 body {
   font-family: @body-font;
@@ -141,7 +142,9 @@ body {
 
 .inventory-title {
   background-color: rgba(1, 32, 105, 0.397);
-  font-size: 1.75em;
+  font-family: @header-font;
+  font-size: 1.5em;
+  font-weight: bold;
   color: white;
   height: 4vh;
   padding-top: 2%;
@@ -279,11 +282,12 @@ button:hover {
   text-align: left;
   padding: 1%;
   padding-left: 3%;
+  font-weight: bold;
 }
 
 
 
-@media(max-width: 780px) {
+@media(max-width: 720px) {
   .master-header {
     height: 50vh;
   }
@@ -340,8 +344,8 @@ button:hover {
   }
 
   .inventory-title {
-    font-size: 1em;
-    padding-top: 2%;
+    font-size: 1.2em;
+    padding-top: 4%;
     height: 4vh;
   }
 
