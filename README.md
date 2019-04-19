@@ -3,16 +3,16 @@ Grocery-List app parses data from JSON file to the web page keeping in mind resp
 https://priyesh91.github.io/Grocery-List/
 
 ## Web Accessibility
-Test for web accessibility: https://achecker.ca/checker/index.php 
-<br/>
-Reference: https://www.wuhcag.com/web-content-accessibility-guidelines/ 
-![5](https://user-images.githubusercontent.com/45401070/56427514-2bb80580-628a-11e9-8588-13e48bfd8806.PNG)
-### APP Passed the following:
+### APP passed the following web accessibility tests:
 <ol>
 <li>WCAG 2.0 (Level A)</li>
 <li>WCAG 2.0 (Level AA)</li>
 <li>WCAG 2.0 (Level AAA)/li>
 </ol>
+Test for web accessibility: https://achecker.ca/checker/index.php 
+<br/>
+Reference: https://www.wuhcag.com/web-content-accessibility-guidelines/ 
+![5](https://user-images.githubusercontent.com/45401070/56427514-2bb80580-628a-11e9-8588-13e48bfd8806.PNG)
 
 ## Screenshots
 ![3](https://user-images.githubusercontent.com/45401070/56427056-7769af80-6288-11e9-8104-2ebf65d27dd2.PNG)
