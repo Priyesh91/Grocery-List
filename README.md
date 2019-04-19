@@ -14,8 +14,6 @@ Test for web accessibility: https://achecker.ca/checker/index.php
 Reference: https://www.wuhcag.com/web-content-accessibility-guidelines/ 
 <br/>
 ![5](https://user-images.githubusercontent.com/45401070/56428478-7c7d2d80-628d-11e9-8c22-532081c73be8.PNG)
-
-
 ## Screenshots
 
 ![3](https://user-images.githubusercontent.com/45401070/56427056-7769af80-6288-11e9-8104-2ebf65d27dd2.PNG)
