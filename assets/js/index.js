@@ -1,20 +1,21 @@
 $(document).ready(function () {
- //animate slogan
+ //animation slogan to phase in
   animateSlogan();
 
   //If I have time I will calculate the following through extracting values from json file instead of using hard coded values:
   //----total quantity calculations:
+
   //-------fixed quantity amount in json file for milk that had qty amount as a string with gallon in it, for time purpose did not write code to isolate that and pull out the interger 1.
   const gListQtySum = groceryList.map(gList => gList.qty).reduce((a, c) => a + c);
   console.log(gListQtySum);
   
-  //----categories array, duplicate removed
   //-------creating array of categories
   const categories = [];
   groceryList.forEach(category => {
     categories.push(category.category);
   })
-  
+  // console.log(categories);
+
   //-------capitalizing function for each word
   const capitalizeNames = array => array.map(name =>
     name.split(' ').map(word =>
@@ -25,27 +26,27 @@ $(document).ready(function () {
       // console.log(capitalizedCategories); 
       
       
-      //removing duplicates
+      //removing duplicates from array
       const uniqueCategories = [...new Set(capitalizedCategories)];
       console.log(uniqueCategories);
       
       //----->>>create function to pularilize words in uniqueCategories array
       
       //----->>>calculation total percent of each category 
-      //----hard setting values will come back later if time permits
+      //----Setting values manually will come back later if time permits to extract values from the array of objects
       fruitqt = 10;
       beverageqt = 4;
       pastaqt = 6;
       dessertqt = 3;
       dairyqt = 12;
-      
-      
-      //canvas chart code
+            
+      //canvas chart code: responsive pie chart from canvas.js, difficult to manipulate with the trial version.
+      //---->>> Inital goal was for each section to be clickable activate cards from that category and display them dynamically below the chart
       var options = {
+        //attempted to change background color of chart through css but couldnot there for added background through the jquery code(this is what lead to certain design choices)
         backgroundColor: "#d3e0ff",
         title: {
           text: ""
-
         },
         subtitles: [{
           // text: "As of April, 2019"
@@ -76,7 +77,7 @@ $(document).ready(function () {
       
 
       
-      //dynamically adding content to webpage 
+      //dynamically adding content to webpage by creating a card template and adding data through the array of objects
       //----card template to add data dynamically from array of objects
       function createCard(cardData) {
         let cardTemplate = [
@@ -92,8 +93,7 @@ $(document).ready(function () {
       
     let cards = $();
     
-    //----dynamically generates cards from groceryList array of objects
-    
+    //----dynamically generates cards from groceryList array of objects using the create card function above and going through the array of objects to add content
     groceryList.forEach(function(item, i) {
       cards = cards.add(createCard(item));
     });
@@ -101,7 +101,7 @@ $(document).ready(function () {
       $("#all-cards").append(cards);
     }); 
     
-    //Click function for button to hide/toggle
+    //Click function for button to hide/toggle cards based on the button clicked
     //----function to hide all cards
     function hideCards() {
       $(".beverage-card, .dairy-card, .dessert-card, .fruit-card, .pasta-card").hide();
@@ -145,7 +145,6 @@ $(document).ready(function () {
       $(".fruit-card").show();
       $("button").removeClass('btn-active')
       $(this).addClass('btn-active')
-
     });
     //----------Show only fruits-cards
     $("#pasta-btn").click(function () {
@@ -153,24 +152,17 @@ $(document).ready(function () {
       $(".pasta-card").show();
       $("button").removeClass('btn-active')
       $(this).addClass('btn-active')
-    });
-      
-    
+    });       
   });
-    
-    
-    
-    
+
+  //animateslogan
     function animateSlogan(){
       $(".sloganDiv").fadeIn( 2000, function() {
         $(".sloganSpan").fadeIn( 1000 );
       });
-    }
+    } 
 
-    
-
-
-    //created grocery list variable to overcome github not recognizing static jason and javascript file
+  //created grocery list variable to overcome github not recognizing static JSON and javascript file
     const groceryList = 
     [{
       "category": "fruit",
