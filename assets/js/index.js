@@ -59,7 +59,7 @@ $(document).ready(function () {
           toolTipContent: "<b>{label}</b>: {y}%",
           // showInLegend: "true", 
           legendText: "{label}",
-          indexLabelFontSize: 16,
+          indexLabelFontSize: 10,
           indexLabel: "{label} - {y}%",
           dataPoints:
           //calucation have been derived manually also functions for each indiviual parts are above as well

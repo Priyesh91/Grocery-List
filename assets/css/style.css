@@ -40,7 +40,7 @@ body {
 .logoimg {
   width: 6em;
   max-width: 75%;
-  max-height: 3.2em;
+  max-height: 3.5em;
   margin-top: 1.75em;
   margin-left: 0.25em;
 }
@@ -58,7 +58,7 @@ body {
   width: 45vw;
 }
 .header-title p {
-  width: 75%;
+  width: 60%;
   font-size: 0.6em;
   text-align: center;
   color: #f3eded;
@@ -85,7 +85,7 @@ body {
   color: white;
   font-size: 3em;
   width: 100%;
-  padding-top: 8%;
+  padding-top: 15%;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -101,6 +101,8 @@ body {
   border-style: solid;
   border-width: 0.1em;
   border-color: #012169;
+  border-top: none;
+  border-bottom: none;
   text-align: center;
   background-image: url(../images/titlebg.PNG);
   background-repeat: no-repeat;
@@ -108,9 +110,9 @@ body {
   background-size: cover;
 }
 .inventory-title {
-  background-color: rgba(1, 32, 105, 0.397);
+  background-color: rgba(1, 32, 105, 0.171);
   font-family: 'Martel', serif;
-  font-size: 1.5em;
+  font-size: 2.4em;
   font-weight: bold;
   color: white;
   height: 4vh;
@@ -232,6 +234,7 @@ button:hover {
   }
   .logo {
     max-width: 5%;
+    margin-right: 10%;
   }
   .logoimg {
     min-width: 3.5em;
@@ -239,41 +242,37 @@ button:hover {
     margin-top: 1.5em;
   }
   .devname {
-    font-size: 0.8em;
+    font-size: 0.6em;
     margin-top: 3em;
     color: #f3eded;
   }
+  .header-title {
+    width: 65vw;
+  }
   .header-title p {
-    margin: 6%;
-    font-size: 0.35em;
-    border-top: 4px double;
-    border-bottom: 4px double;
-    border-width: 4px, 0;
-    padding: 1em 0em;
+    width: 73%;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    font-size: 0.2em;
   }
   .header-title p span {
-    letter-spacing: none;
-    font-size: 3em;
-    font-weight: bold;
-    color: white;
-    font-family: 'Oswald', sans-serif;
-    line-height: 1.5em;
+    font-size: 5em;
   }
   .slogan-statement p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     width: 100%;
-    padding-top: 17%;
+    padding-top: 15%;
   }
   .slogan-statement p span {
-    line-height: 3em;
-    font-size: 0.55em;
+    line-height: 2em;
+    font-size: 0.45em;
   }
   .detailed-inventory {
     height: 375vh;
   }
   .inventory-title {
     font-size: 1.8em;
-    padding-top: 4%;
+    padding-top: 3%;
     height: 4vh;
   }
   .buttons-wrapper {
@@ -293,8 +292,19 @@ button:hover {
   }
   .card {
     width: 85%;
-    height: 43vh;
+    height: 60vh;
     margin-top: 5%;
+  }
+  .card-title h2 {
+    margin-top: 4%;
+  }
+  .card-title img {
+    height: 100%;
+    width: 25%;
+  }
+  .card-image {
+    text-align: center;
+    height: 40vh;
   }
 }
 @media (min-width: 1200px) {
@@ -330,8 +340,20 @@ button:hover {
     padding-top: 1%;
     padding-bottom: 1%;
   }
+  .slogan-statement p {
+    font-size: 4em;
+    padding-top: 5%;
+  }
+  .slogan-statement p span {
+    line-height: 3em;
+    font-size: 0.45em;
+  }
   .detailed-inventory {
-    height: 110vh;
+    height: 375vh;
+  }
+  .inventory-title {
+    font-size: 3em;
+    padding-top: 1.5%;
   }
   .card {
     width: 20%;
