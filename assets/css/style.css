@@ -248,6 +248,7 @@ button:hover {
   }
   .header-title {
     width: 65vw;
+    letter-spacing: 0.08em;
   }
   .header-title p {
     width: 73%;
