@@ -129,7 +129,6 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 200vh;
 }
 .buttons-wrapper {
   display: flex;
@@ -267,9 +266,6 @@ button:hover {
     line-height: 2em;
     font-size: 0.45em;
   }
-  .detailed-inventory {
-    height: 375vh;
-  }
   .inventory-title {
     font-size: 1.8em;
     padding-top: 3%;
@@ -278,7 +274,7 @@ button:hover {
   .buttons-wrapper {
     display: flex;
     flex-flow: column wrap;
-    height: 20vh;
+    height: 18vh;
   }
   .buttons-wrapper button {
     height: 40%;
@@ -287,8 +283,8 @@ button:hover {
   }
   .buttons-wrapper button p {
     margin: 0;
-    padding-top: 4%;
-    font-size: 1em;
+    padding-top: 10%;
+    font-size: 1.25em;
   }
   .card {
     width: 85%;
@@ -347,9 +343,6 @@ button:hover {
   .slogan-statement p span {
     line-height: 3em;
     font-size: 0.45em;
-  }
-  .detailed-inventory {
-    height: 375vh;
   }
   .inventory-title {
     font-size: 3em;
