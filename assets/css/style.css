@@ -14,7 +14,8 @@ body {
   width: 100%;
   height: 65vh;
 }
-/* first navbar with gradient
+/* first navbar with gradient, creating a theme from the blue color from Merril Lynch Bank of America
+
 .navbar {
   display: flex;
   flex-wrap: nowrap;
@@ -288,7 +289,7 @@ button:hover {
   }
   .card {
     width: 85%;
-    height: 60vh;
+    height: 62vh;
     margin-top: 5%;
   }
   .card-title h2 {

@@ -3,8 +3,8 @@
 @secondary-color: lighten(@primary-color, 40%);
 @background-color: #f3f3f307;
 @red-color: "red";
-@chart-color: #d3e0ff;
-@grey-text: rgb(243, 237, 237);
+@Lightbluebg-color: #d3e0ff;
+@greytext-color: rgb(243, 237, 237);
 @line-height: 1.2em;
 @body-font: 'Spectral', serif;
 @title-font: 'Oswald', sans-serif;
@@ -29,8 +29,8 @@ body {
   height: 65vh;
 }
 
+/* first navbar with gradient, creating a theme from the blue color from Merril Lynch Bank of America
 
-/* first navbar with gradient
 .navbar {
   display: flex;
   flex-wrap: nowrap;
@@ -41,6 +41,7 @@ body {
   padding: auto;
 }
 */
+
 .navbartwo {
   display: flex;
   flex-wrap: nowrap;
@@ -67,14 +68,14 @@ body {
 }
 
 .devname {
-  // display: flex;
   padding: 1%;
-  color: @grey-text;
+  color: @greytext-color;
   margin-top: 2.5em;
   margin-right: .25em;
 
 }
 
+//css to brand-title of the website
 .header-title {
   display: flex;
   justify-content: center;
@@ -86,7 +87,7 @@ body {
     width: 60%;
     font-size: .6em;
     text-align: center;
-    color: @grey-text;
+    color: @greytext-color;
     border-top: 4px double;
     border-bottom: 4px double;
     border-width: 4px, 0;
@@ -102,7 +103,7 @@ body {
     }
   }
 }
-
+//css to slogan of website on the hero image
 .slogan-statement {
   display: flex;
   align-items: center;
@@ -122,13 +123,13 @@ body {
     span {
       line-height: 4em;
       font-size: .4em;
-      color: @grey-text;
+      color: @greytext-color;
       display: none;
     }
-
   }
 }
 
+//css to groceries inventory section
 .ginventory {
   border-style: solid;
   border-width: .1em;
@@ -151,13 +152,15 @@ body {
   color: white;
   height: 4vh;
   padding-top: 2%;
-  
+
 }
 
+//css changes to chart div is made through jquery since using cavas.js library, adjusted opacity to dull down the chart colors.
 .canvasjs-chart-container {
   opacity: .9;
 }
 
+//css to detailed inventory section
 .detailed-inventory {
   border-style: solid;
   border-width: .1em;
@@ -169,6 +172,7 @@ body {
   background-size: cover;
 }
 
+//button wrapper to keep all 6 buttons from categories in a row for 720p screens
 .buttons-wrapper {
   display: flex;
   flex-flow: row nowrap;
@@ -183,7 +187,7 @@ body {
     height: 100%;
     border: solid;
     border-radius: 30%;
-    // background-color: @chart-color;
+    // background-color: @Lightbluebg-color;
     display: flex;
     justify-content: center;
   }
@@ -200,7 +204,7 @@ body {
 
 //button styling was causing issues when using less to css nested elements from buttons-wrapper, for workaround styled buttons using class.
 .btn {
-  background-color: @chart-color;
+  background-color: @Lightbluebg-color;
   color: black;
 }
 
@@ -216,6 +220,7 @@ button:hover {
   font-weight: bold;
 }
 
+// css to cards section
 .cards-main {
   display: flex;
   justify-content: space-evenly;
@@ -230,22 +235,23 @@ button:hover {
   padding-left: 0;
   display: flex;
   flex-direction: column;
-  // background-color: @chart-color;
+  // background-color: @Lightbluebg-color;
   opacity: .8;
   // background-image: url("../images/banner4.jpg");
-  background-color: @chart-color;
+  background-color: @Lightbluebg-color;
   opacity: 1;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-attachment: scroll;
   border: solid;
-  border-color: @chart-color;
+  border-color: @Lightbluebg-color;
   box-shadow: 10px 10px 5px rgb(22, 22, 22);
 }
 
+//attempted to css the properties through nesting elements but did not work, not sure if was an issue with jquery dynamically generating the cards and Less compiler or some syntax issue.
 .card-title {
-  background-color: @chart-color;
+  background-color: @Lightbluebg-color;
   color: black;
   // border-bottom: solid;
   text-align: center;
@@ -279,7 +285,7 @@ button:hover {
 .card-brand,
 .card-qty {
   height: 100%;
-  background-color: @chart-color;
+  background-color: @Lightbluebg-color;
   color: black;
   text-align: left;
   padding: 1%;
@@ -288,7 +294,7 @@ button:hover {
 }
 
 
-
+//media queries for smaller screens
 @media(max-width: 720px) {
   .master-header {
     height: 50vh;
@@ -296,7 +302,7 @@ button:hover {
 
   .logo {
     max-width: 5%;
-    margin-right:10%;
+    margin-right: 10%;
   }
 
   .logoimg {
@@ -306,20 +312,21 @@ button:hover {
   }
 
   .devname {
-    // visibility: hidden;
     font-size: .6em;
     margin-top: 3em;
-    color: @grey-text;
+    color: @greytext-color;
 
   }
 
   .header-title {
     width: 65vw;
+
     p {
-      width:73%;
+      width: 73%;
       margin-top: 6%;
       margin-bottom: 6%;
       font-size: .2em;
+
       span {
         font-size: 5em;
       }
@@ -361,24 +368,25 @@ button:hover {
         font-size: 1.25em;
       }
     }
-
   }
 
   .card {
     width: 85%;
-    height: 60vh;
+    height: 62vh;
     margin-top: 5%;
   }
+
   .card-title {
-    h2{
+    h2 {
       margin-top: 4%;
     }
+
     img {
       height: 100%;
       width: 25%;
     }
   }
-  
+
   .card-image {
     // border-bottom: solid;
     text-align: center;
@@ -386,6 +394,7 @@ button:hover {
   }
 }
 
+//media queries for full sized screens
 @media (min-width: 1200px) {
   .logo {
     margin-top: 2%;
@@ -400,13 +409,14 @@ button:hover {
 
   .devname {
     padding: 1%;
-    color: @grey-text;
+    color: @greytext-color;
     margin-top: 3%;
     font-size: 1.5em;
   }
 
   .header-title {
     line-height: 1.25em;
+
     p {
       width: 45%;
       margin: 2%;
@@ -424,6 +434,7 @@ button:hover {
     padding-top: 1%;
     padding-bottom: 1%;
   }
+
   .slogan-statement {
     p {
       font-size: 4.0em;
@@ -435,13 +446,13 @@ button:hover {
       }
     }
   }
- 
+
 
   .inventory-title {
     font-size: 3em;
     padding-top: 1.5%;
   }
-  
+
   .buttons-wrapper {
     height: 6vh;
 
