@@ -160,7 +160,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 75vh;
+  height: 200vh;
 }
 
 .buttons-wrapper {
@@ -215,57 +215,66 @@ button:hover {
   justify-content: space-evenly;
   flex-wrap: wrap;
   height: 100%;
-
-  .card {
-    width: 25%;
-    margin: 1%;
-    padding-left: 2%;
-  }
 }
 
 .card {
-  border: solid;
-  background-color: @chart-color;
+  width: 35%;
+  height: 42vh;
+  margin: 1%;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  // background-color: @chart-color;
   opacity: .8;
+  // background-image: url("../images/banner4.jpg");
+  background-color: @chart-color;
 
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: scroll;
+  border: solid;
+  border-color: @chart-color;
 }
 
-//gradient border from codepen
-.gradient-border {
-  --borderWidth: 3px;
-  background: #1D1F20;
-  position: relative;
-  border-radius: var(--borderWidth);
-}
-
-.gradient-border:after {
-  content: '';
-  position: absolute;
-  top: calc(-1 * var(--borderWidth));
-  left: calc(-1 * var(--borderWidth));
-  height: calc(100% + var(--borderWidth) * 2);
-  width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-  border-radius: calc(2 * var(--borderWidth));
-  z-index: -1;
-  animation: animatedgradient 3s ease alternate infinite;
-  background-size: 300% 300%;
-}
-
-
-@keyframes animatedgradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
+.card-title {
+  background-color: @chart-color;
+  color: black;
+  // border-bottom: solid;
+  text-align: center;
+  height: 7vh;
+  display: flex;
+  justify-content: flex-start;
+  img {
+    height: 100%;
+    width: 25%;
   }
 }
+
+.card-image{
+  // border-bottom: solid;
+  text-align: center;
+  height: 25vh;
+
+  img{
+    height: 100%;
+    width: 96%;
+  }
+}
+
+.card-info{
+  display: flex;
+  flex-direction: column;
+  }
+.card-type, .card-brand, .card-qty{
+  height: 100%;
+  background-color: @chart-color;
+  color:black;
+  text-align: left;
+  padding: 1%;
+  padding-left: 3%;
+  }
 
 
 
@@ -348,6 +357,15 @@ button:hover {
       }
     }
   }
+  .card {
+    width: 85%;
+    height: 42vh;
+    margin-top: 3%;
+  }
 }
-
-@media(max-width: 1020px) {}
+@media (min-width: 1200px) {
+  .card {
+    width: 20%;
+    height: 42vh;
+  }
+}

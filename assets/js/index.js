@@ -74,17 +74,18 @@ $(document).ready(function () {
       };
       $("#chartContainer").CanvasJSChart(options);
       
-      
+
       
       //dynamically adding content to webpage 
       //----card template to add data dynamically from array of objects
       function createCard(cardData) {
         let cardTemplate = [
-          "<div class='gradient-border card ",cardData.category,"-card'>",
-          "<h2>",cardData.item,"</h2>",
-          "<h3>Type: ",cardData.type,"</h3>",
-          "<h4>Brand: ",cardData.brand,"</h4>",
-          "<h5>Quantity: ",cardData.qty,"</h5>"
+          "<div class='card ",cardData.category,"-card'>",
+          "<div class='card-title'><img src='assets/images/svgicons/",cardData.category,".svg' alt='please see alt from same image above'></img><h2>",cardData.item,"</h2></div>",
+          "<div class='card-image'><img src='assets/images/cardimages/",cardData.type,".jpg' alt='free image of ",cardData.type," sourced from pexels.com'</img>",
+          "<div class='card-info'><div class='card-type'>Type: ",cardData.type,"</div>",
+          "<div class='card-brand'>Brand: ",cardData.brand,"</div>",
+          "<div class='card-qty'>Quantity: ",cardData.qty,"</div>"
         ];
         return $(cardTemplate.join(""));
       };
@@ -178,13 +179,7 @@ $(document).ready(function () {
       "brand": "Little cuties",
       "qty": 10
     },
-    {
-      "category": "beverage",
-      "item": "Milk",
-      "type": "2%",
-      "brand": "generic",
-      "qty": 1
-      },
+    
     {
       "category": "pasta",
       "item": "Pasta",
@@ -220,6 +215,13 @@ $(document).ready(function () {
       "brand": "Happy Farms",
       "qty": 2
     },
+    {
+      "category": "beverage",
+      "item": "Milk",
+      "type": "TwoPercent",
+      "brand": "generic",
+      "qty": 1
+      },
     {
       "category": "beverage",
       "item": "Vodka",
