@@ -184,6 +184,7 @@ button:hover {
   background-attachment: scroll;
   border: solid;
   border-color: #d3e0ff;
+  box-shadow: 10px 10px 5px #161616;
 }
 .card-title {
   background-color: #d3e0ff;
@@ -258,6 +259,9 @@ button:hover {
     line-height: 3em;
     font-size: 0.55em;
   }
+  .detailed-inventory {
+    height: 375vh;
+  }
   .inventory-title {
     font-size: 1em;
     padding-top: 2%;
@@ -283,11 +287,14 @@ button:hover {
   }
   .card {
     width: 85%;
-    height: 42vh;
-    margin-top: 3%;
+    height: 43vh;
+    margin-top: 5%;
   }
 }
 @media (min-width: 1200px) {
+  .detailed-inventory {
+    height: 110vh;
+  }
   .card {
     width: 20%;
     height: 42vh;

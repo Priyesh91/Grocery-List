@@ -236,6 +236,7 @@ button:hover {
   background-attachment: scroll;
   border: solid;
   border-color: @chart-color;
+  box-shadow: 10px 10px 5px rgb(22, 22, 22);
 }
 
 .card-title {
@@ -246,35 +247,39 @@ button:hover {
   height: 7vh;
   display: flex;
   justify-content: flex-start;
+
   img {
     height: 100%;
     width: 25%;
   }
 }
 
-.card-image{
+.card-image {
   // border-bottom: solid;
   text-align: center;
   height: 25vh;
 
-  img{
+  img {
     height: 100%;
     width: 96%;
   }
 }
 
-.card-info{
+.card-info {
   display: flex;
   flex-direction: column;
-  }
-.card-type, .card-brand, .card-qty{
+}
+
+.card-type,
+.card-brand,
+.card-qty {
   height: 100%;
   background-color: @chart-color;
-  color:black;
+  color: black;
   text-align: left;
   padding: 1%;
   padding-left: 3%;
-  }
+}
 
 
 
@@ -330,6 +335,10 @@ button:hover {
     }
   }
 
+  .detailed-inventory {
+    height: 375vh;
+  }
+
   .inventory-title {
     font-size: 1em;
     padding-top: 2%;
@@ -357,13 +366,19 @@ button:hover {
       }
     }
   }
+
   .card {
     width: 85%;
-    height: 42vh;
-    margin-top: 3%;
+    height: 43vh;
+    margin-top: 5%;
   }
 }
+
 @media (min-width: 1200px) {
+  .detailed-inventory {
+    height: 110vh;
+  }
+
   .card {
     width: 20%;
     height: 42vh;
