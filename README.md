@@ -12,9 +12,9 @@ https://priyesh91.github.io/Grocery-List/
 Test for web accessibility: https://achecker.ca/checker/index.php 
 <br/>
 Reference: https://www.wuhcag.com/web-content-accessibility-guidelines/ 
-<br/><br/> 
-![5](https://user-images.githubusercontent.com/45401070/56428478-7c7d2d80-628d-11e9-8c22-532081c73be8.PNG) 
- <br/><br/>
+<br/>
+ ![6](https://user-images.githubusercontent.com/45401070/56428743-789ddb00-628e-11e9-8e54-fd72a86c293c.PNG)
+
  
 ## Screenshots
 <br/>
